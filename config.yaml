@@ -1,0 +1,5 @@
+repositories:
+- name: "c3os"
+  url: "quay.io/c3os/packages"
+  type: "docker"
+  github: "https://github.com/c3os-io/packages"
