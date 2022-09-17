@@ -1,5 +1,5 @@
 repositories:
-- name: "c3os"
-  url: "quay.io/c3os/packages"
+- name: "Kairos"
+  url: "quay.io/kairos/packages"
   type: "docker"
-  github: "https://github.com/c3os-io/packages"
+  github: "https://github.com/kairos-io/packages"
