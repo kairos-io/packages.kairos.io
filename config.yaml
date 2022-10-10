@@ -3,3 +3,7 @@ repositories:
   url: "quay.io/kairos/packages"
   type: "docker"
   github: "https://github.com/kairos-io/packages"
+- name: "Kairos ARM64"
+  url: "quay.io/kairos/packages-arm64"
+  type: "docker"
+  github: "https://github.com/kairos-io/packages"
