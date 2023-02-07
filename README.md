@@ -11,11 +11,10 @@
     <img src="https://img.shields.io/badge/licence-APL2-brightgreen"
          alt="license">
   </a>
-  <a href="https://github.com/kairos-io/AuroraBoot/issues"><img src="https://img.shields.io/github/issues/kairos-io/AuroraBoot"></a>
+  <a href="https://github.com/kairos-io/packages.kairos.io/issues"><img src="https://img.shields.io/github/issues/kairos-io/packages.kairos.io"></a>
   <a href="https://kairos.io/docs/" target=_blank> <img src="https://img.shields.io/badge/Documentation-blue"
          alt="docs"></a>
   <img src="https://img.shields.io/badge/made%20with-Go-blue">
-  <img src="https://goreportcard.com/badge/github.com/kairos-io/AuroraBoot" alt="go report card" />
 </p>
 
 
