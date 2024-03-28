@@ -1,0 +1,656 @@
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing static/grub-artifacts-0.2 in Kairos ARM64 </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href=""><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> static/grub-artifacts-0.2
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="/Kairos%20ARM64">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     Kairos ARM64
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of static/grub-artifacts
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/kairos/packages-arm64:grub-artifacts-static-0.2" target="_blank"> quay.io/kairos/packages-arm64:grub-artifacts-static-0.2 </a> </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 0.2  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong>  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "arm64-efi\/acpi.mod" ],
+            
+              [  "arm64-efi\/adler32.mod" ],
+            
+              [  "arm64-efi\/affs.mod" ],
+            
+              [  "arm64-efi\/afs.mod" ],
+            
+              [  "arm64-efi\/afsplitter.mod" ],
+            
+              [  "arm64-efi\/all_video.mod" ],
+            
+              [  "arm64-efi\/appended_signature_test.mod" ],
+            
+              [  "arm64-efi\/appendedsig.mod" ],
+            
+              [  "arm64-efi\/archelp.mod" ],
+            
+              [  "arm64-efi\/asn1.mod" ],
+            
+              [  "arm64-efi\/bfs.mod" ],
+            
+              [  "arm64-efi\/bitmap.mod" ],
+            
+              [  "arm64-efi\/bitmap_scale.mod" ],
+            
+              [  "arm64-efi\/blocklist.mod" ],
+            
+              [  "arm64-efi\/boot.mod" ],
+            
+              [  "arm64-efi\/boot_loader_interface.mod" ],
+            
+              [  "arm64-efi\/bswap_test.mod" ],
+            
+              [  "arm64-efi\/btrfs.mod" ],
+            
+              [  "arm64-efi\/bufio.mod" ],
+            
+              [  "arm64-efi\/cat.mod" ],
+            
+              [  "arm64-efi\/cbfs.mod" ],
+            
+              [  "arm64-efi\/chain.mod" ],
+            
+              [  "arm64-efi\/cmdline.mod" ],
+            
+              [  "arm64-efi\/cmdline_cat_test.mod" ],
+            
+              [  "arm64-efi\/cmp.mod" ],
+            
+              [  "arm64-efi\/cmp_test.mod" ],
+            
+              [  "arm64-efi\/command.lst" ],
+            
+              [  "arm64-efi\/configfile.mod" ],
+            
+              [  "arm64-efi\/cpio.mod" ],
+            
+              [  "arm64-efi\/cpio_be.mod" ],
+            
+              [  "arm64-efi\/crc64.mod" ],
+            
+              [  "arm64-efi\/crypto.lst" ],
+            
+              [  "arm64-efi\/crypto.mod" ],
+            
+              [  "arm64-efi\/cryptodisk.mod" ],
+            
+              [  "arm64-efi\/crypttab.mod" ],
+            
+              [  "arm64-efi\/ctz_test.mod" ],
+            
+              [  "arm64-efi\/date.mod" ],
+            
+              [  "arm64-efi\/datehook.mod" ],
+            
+              [  "arm64-efi\/datetime.mod" ],
+            
+              [  "arm64-efi\/disk.mod" ],
+            
+              [  "arm64-efi\/diskfilter.mod" ],
+            
+              [  "arm64-efi\/div.mod" ],
+            
+              [  "arm64-efi\/div_test.mod" ],
+            
+              [  "arm64-efi\/dm_nv.mod" ],
+            
+              [  "arm64-efi\/echo.mod" ],
+            
+              [  "arm64-efi\/efi_gop.mod" ],
+            
+              [  "arm64-efi\/efifwsetup.mod" ],
+            
+              [  "arm64-efi\/efinet.mod" ],
+            
+              [  "arm64-efi\/elf.mod" ],
+            
+              [  "arm64-efi\/eval.mod" ],
+            
+              [  "arm64-efi\/exfat.mod" ],
+            
+              [  "arm64-efi\/exfctest.mod" ],
+            
+              [  "arm64-efi\/ext2.mod" ],
+            
+              [  "arm64-efi\/extcmd.mod" ],
+            
+              [  "arm64-efi\/f2fs.mod" ],
+            
+              [  "arm64-efi\/fat.mod" ],
+            
+              [  "arm64-efi\/fdt.lst" ],
+            
+              [  "arm64-efi\/fdt.mod" ],
+            
+              [  "arm64-efi\/file.mod" ],
+            
+              [  "arm64-efi\/font.mod" ],
+            
+              [  "arm64-efi\/fs.lst" ],
+            
+              [  "arm64-efi\/fshelp.mod" ],
+            
+              [  "arm64-efi\/functional_test.mod" ],
+            
+              [  "arm64-efi\/gcry_arcfour.mod" ],
+            
+              [  "arm64-efi\/gcry_blowfish.mod" ],
+            
+              [  "arm64-efi\/gcry_camellia.mod" ],
+            
+              [  "arm64-efi\/gcry_cast5.mod" ],
+            
+              [  "arm64-efi\/gcry_crc.mod" ],
+            
+              [  "arm64-efi\/gcry_des.mod" ],
+            
+              [  "arm64-efi\/gcry_dsa.mod" ],
+            
+              [  "arm64-efi\/gcry_idea.mod" ],
+            
+              [  "arm64-efi\/gcry_md4.mod" ],
+            
+              [  "arm64-efi\/gcry_md5.mod" ],
+            
+              [  "arm64-efi\/gcry_rfc2268.mod" ],
+            
+              [  "arm64-efi\/gcry_rijndael.mod" ],
+            
+              [  "arm64-efi\/gcry_rmd160.mod" ],
+            
+              [  "arm64-efi\/gcry_rsa.mod" ],
+            
+              [  "arm64-efi\/gcry_seed.mod" ],
+            
+              [  "arm64-efi\/gcry_serpent.mod" ],
+            
+              [  "arm64-efi\/gcry_sha1.mod" ],
+            
+              [  "arm64-efi\/gcry_sha256.mod" ],
+            
+              [  "arm64-efi\/gcry_sha512.mod" ],
+            
+              [  "arm64-efi\/gcry_tiger.mod" ],
+            
+              [  "arm64-efi\/gcry_twofish.mod" ],
+            
+              [  "arm64-efi\/gcry_whirlpool.mod" ],
+            
+              [  "arm64-efi\/geli.mod" ],
+            
+              [  "arm64-efi\/gettext.mod" ],
+            
+              [  "arm64-efi\/gfxmenu.mod" ],
+            
+              [  "arm64-efi\/gfxterm.mod" ],
+            
+              [  "arm64-efi\/gfxterm_background.mod" ],
+            
+              [  "arm64-efi\/gfxterm_menu.mod" ],
+            
+              [  "arm64-efi\/gptsync.mod" ],
+            
+              [  "arm64-efi\/grub.efi" ],
+            
+              [  "arm64-efi\/gzio.mod" ],
+            
+              [  "arm64-efi\/halt.mod" ],
+            
+              [  "arm64-efi\/hashsum.mod" ],
+            
+              [  "arm64-efi\/hello.mod" ],
+            
+              [  "arm64-efi\/help.mod" ],
+            
+              [  "arm64-efi\/hexdump.mod" ],
+            
+              [  "arm64-efi\/hfs.mod" ],
+            
+              [  "arm64-efi\/hfsplus.mod" ],
+            
+              [  "arm64-efi\/hfspluscomp.mod" ],
+            
+              [  "arm64-efi\/http.mod" ],
+            
+              [  "arm64-efi\/iso9660.mod" ],
+            
+              [  "arm64-efi\/jfs.mod" ],
+            
+              [  "arm64-efi\/jpeg.mod" ],
+            
+              [  "arm64-efi\/json.mod" ],
+            
+              [  "arm64-efi\/kernel.exec" ],
+            
+              [  "arm64-efi\/kernel.img" ],
+            
+              [  "arm64-efi\/keystatus.mod" ],
+            
+              [  "arm64-efi\/ldm.mod" ],
+            
+              [  "arm64-efi\/linux.mod" ],
+            
+              [  "arm64-efi\/loadenv.mod" ],
+            
+              [  "arm64-efi\/loopback.mod" ],
+            
+              [  "arm64-efi\/ls.mod" ],
+            
+              [  "arm64-efi\/lsacpi.mod" ],
+            
+              [  "arm64-efi\/lsefi.mod" ],
+            
+              [  "arm64-efi\/lsefimmap.mod" ],
+            
+              [  "arm64-efi\/lsefisystab.mod" ],
+            
+              [  "arm64-efi\/lsmmap.mod" ],
+            
+              [  "arm64-efi\/lssal.mod" ],
+            
+              [  "arm64-efi\/luks.mod" ],
+            
+              [  "arm64-efi\/luks2.mod" ],
+            
+              [  "arm64-efi\/lvm.mod" ],
+            
+              [  "arm64-efi\/lzopio.mod" ],
+            
+              [  "arm64-efi\/macbless.mod" ],
+            
+              [  "arm64-efi\/macho.mod" ],
+            
+              [  "arm64-efi\/mdraid09.mod" ],
+            
+              [  "arm64-efi\/mdraid09_be.mod" ],
+            
+              [  "arm64-efi\/mdraid1x.mod" ],
+            
+              [  "arm64-efi\/memdisk.mod" ],
+            
+              [  "arm64-efi\/memrw.mod" ],
+            
+              [  "arm64-efi\/minicmd.mod" ],
+            
+              [  "arm64-efi\/minix.mod" ],
+            
+              [  "arm64-efi\/minix2.mod" ],
+            
+              [  "arm64-efi\/minix2_be.mod" ],
+            
+              [  "arm64-efi\/minix3.mod" ],
+            
+              [  "arm64-efi\/minix3_be.mod" ],
+            
+              [  "arm64-efi\/minix_be.mod" ],
+            
+              [  "arm64-efi\/mmap.mod" ],
+            
+              [  "arm64-efi\/moddep.lst" ],
+            
+              [  "arm64-efi\/modinfo.sh" ],
+            
+              [  "arm64-efi\/mpi.mod" ],
+            
+              [  "arm64-efi\/msdospart.mod" ],
+            
+              [  "arm64-efi\/mul_test.mod" ],
+            
+              [  "arm64-efi\/net.mod" ],
+            
+              [  "arm64-efi\/newc.mod" ],
+            
+              [  "arm64-efi\/nilfs2.mod" ],
+            
+              [  "arm64-efi\/normal.mod" ],
+            
+              [  "arm64-efi\/ntfs.mod" ],
+            
+              [  "arm64-efi\/ntfscomp.mod" ],
+            
+              [  "arm64-efi\/odc.mod" ],
+            
+              [  "arm64-efi\/offsetio.mod" ],
+            
+              [  "arm64-efi\/part_acorn.mod" ],
+            
+              [  "arm64-efi\/part_amiga.mod" ],
+            
+              [  "arm64-efi\/part_apple.mod" ],
+            
+              [  "arm64-efi\/part_bsd.mod" ],
+            
+              [  "arm64-efi\/part_dfly.mod" ],
+            
+              [  "arm64-efi\/part_dvh.mod" ],
+            
+              [  "arm64-efi\/part_gpt.mod" ],
+            
+              [  "arm64-efi\/part_msdos.mod" ],
+            
+              [  "arm64-efi\/part_plan.mod" ],
+            
+              [  "arm64-efi\/part_sun.mod" ],
+            
+              [  "arm64-efi\/part_sunpc.mod" ],
+            
+              [  "arm64-efi\/partmap.lst" ],
+            
+              [  "arm64-efi\/parttool.lst" ],
+            
+              [  "arm64-efi\/parttool.mod" ],
+            
+              [  "arm64-efi\/password.mod" ],
+            
+              [  "arm64-efi\/password_pbkdf2.mod" ],
+            
+              [  "arm64-efi\/pbkdf2.mod" ],
+            
+              [  "arm64-efi\/pbkdf2_test.mod" ],
+            
+              [  "arm64-efi\/pgp.mod" ],
+            
+              [  "arm64-efi\/pkcs1_v15.mod" ],
+            
+              [  "arm64-efi\/png.mod" ],
+            
+              [  "arm64-efi\/priority_queue.mod" ],
+            
+              [  "arm64-efi\/probe.mod" ],
+            
+              [  "arm64-efi\/procfs.mod" ],
+            
+              [  "arm64-efi\/progress.mod" ],
+            
+              [  "arm64-efi\/raid5rec.mod" ],
+            
+              [  "arm64-efi\/raid6rec.mod" ],
+            
+              [  "arm64-efi\/read.mod" ],
+            
+              [  "arm64-efi\/reboot.mod" ],
+            
+              [  "arm64-efi\/regexp.mod" ],
+            
+              [  "arm64-efi\/reiserfs.mod" ],
+            
+              [  "arm64-efi\/romfs.mod" ],
+            
+              [  "arm64-efi\/scsi.mod" ],
+            
+              [  "arm64-efi\/search.mod" ],
+            
+              [  "arm64-efi\/search_fs_file.mod" ],
+            
+              [  "arm64-efi\/search_fs_uuid.mod" ],
+            
+              [  "arm64-efi\/search_label.mod" ],
+            
+              [  "arm64-efi\/serial.mod" ],
+            
+              [  "arm64-efi\/setjmp.mod" ],
+            
+              [  "arm64-efi\/setjmp_test.mod" ],
+            
+              [  "arm64-efi\/sfs.mod" ],
+            
+              [  "arm64-efi\/shift_test.mod" ],
+            
+              [  "arm64-efi\/signature_test.mod" ],
+            
+              [  "arm64-efi\/sleep.mod" ],
+            
+              [  "arm64-efi\/sleep_test.mod" ],
+            
+              [  "arm64-efi\/smbios.mod" ],
+            
+              [  "arm64-efi\/squash4.mod" ],
+            
+              [  "arm64-efi\/strtoull_test.mod" ],
+            
+              [  "arm64-efi\/syslinuxcfg.mod" ],
+            
+              [  "arm64-efi\/tar.mod" ],
+            
+              [  "arm64-efi\/terminal.lst" ],
+            
+              [  "arm64-efi\/terminal.mod" ],
+            
+              [  "arm64-efi\/terminfo.mod" ],
+            
+              [  "arm64-efi\/test.mod" ],
+            
+              [  "arm64-efi\/test_asn1.mod" ],
+            
+              [  "arm64-efi\/test_blockarg.mod" ],
+            
+              [  "arm64-efi\/testload.mod" ],
+            
+              [  "arm64-efi\/testspeed.mod" ],
+            
+              [  "arm64-efi\/tftp.mod" ],
+            
+              [  "arm64-efi\/tga.mod" ],
+            
+              [  "arm64-efi\/time.mod" ],
+            
+              [  "arm64-efi\/tpm.mod" ],
+            
+              [  "arm64-efi\/tpm2.mod" ],
+            
+              [  "arm64-efi\/tr.mod" ],
+            
+              [  "arm64-efi\/trig.mod" ],
+            
+              [  "arm64-efi\/true.mod" ],
+            
+              [  "arm64-efi\/udf.mod" ],
+            
+              [  "arm64-efi\/ufs1.mod" ],
+            
+              [  "arm64-efi\/ufs1_be.mod" ],
+            
+              [  "arm64-efi\/ufs2.mod" ],
+            
+              [  "arm64-efi\/video.lst" ],
+            
+              [  "arm64-efi\/video.mod" ],
+            
+              [  "arm64-efi\/video_colors.mod" ],
+            
+              [  "arm64-efi\/video_fb.mod" ],
+            
+              [  "arm64-efi\/videoinfo.mod" ],
+            
+              [  "arm64-efi\/videotest.mod" ],
+            
+              [  "arm64-efi\/videotest_checksum.mod" ],
+            
+              [  "arm64-efi\/xen_boot.mod" ],
+            
+              [  "arm64-efi\/xfs.mod" ],
+            
+              [  "arm64-efi\/xnu_uuid.mod" ],
+            
+              [  "arm64-efi\/xnu_uuid_test.mod" ],
+            
+              [  "arm64-efi\/xzio.mod" ],
+            
+              [  "arm64-efi\/zstd.mod" ],
+            
+              [  "ascii.pf2" ],
+            
+              [  "euro.pf2" ],
+            
+              [  "grub-mkconfig_lib" ],
+            
+              [  "unicode.pf2" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>
