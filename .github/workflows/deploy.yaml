@@ -24,7 +24,7 @@ jobs:
         sudo -E luet-package-browser --config config.yaml --output build --templates templates
         sudo cp -rfv CNAME build/
     - name: Deploy GH Pages 🚀
-      uses: JamesIves/github-pages-deploy-action@3.7.1
+      uses: JamesIves/github-pages-deploy-action@v4.7.3
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages # The branch the action should deploy to.
