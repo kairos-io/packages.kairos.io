@@ -1,0 +1,995 @@
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing firmware/rpi-1.20250326 in Kairos </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href=""><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> firmware/rpi-1.20250326
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="/Kairos">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     Kairos
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of firmware/rpi
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/kairos/packages:rpi-firmware-1.20250326" target="_blank"> quay.io/kairos/packages:rpi-firmware-1.20250326 </a> </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 1.20250326  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong>  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> autobump.skip_if_contains: [&#34;rc&#34;]
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> github.owner: raspberrypi
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> github.repo: firmware
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "COPYING.linux" ],
+            
+              [  "LICENCE.broadcom" ],
+            
+              [  "bcm2708-rpi-b-plus.dtb" ],
+            
+              [  "bcm2708-rpi-b-rev1.dtb" ],
+            
+              [  "bcm2708-rpi-b.dtb" ],
+            
+              [  "bcm2708-rpi-cm.dtb" ],
+            
+              [  "bcm2708-rpi-zero-w.dtb" ],
+            
+              [  "bcm2708-rpi-zero.dtb" ],
+            
+              [  "bcm2709-rpi-2-b.dtb" ],
+            
+              [  "bcm2709-rpi-cm2.dtb" ],
+            
+              [  "bcm2710-rpi-2-b.dtb" ],
+            
+              [  "bcm2710-rpi-3-b-plus.dtb" ],
+            
+              [  "bcm2710-rpi-3-b.dtb" ],
+            
+              [  "bcm2710-rpi-cm0.dtb" ],
+            
+              [  "bcm2710-rpi-cm3.dtb" ],
+            
+              [  "bcm2710-rpi-zero-2-w.dtb" ],
+            
+              [  "bcm2710-rpi-zero-2.dtb" ],
+            
+              [  "bcm2711-rpi-4-b.dtb" ],
+            
+              [  "bcm2711-rpi-400.dtb" ],
+            
+              [  "bcm2711-rpi-cm4-io.dtb" ],
+            
+              [  "bcm2711-rpi-cm4.dtb" ],
+            
+              [  "bcm2711-rpi-cm4s.dtb" ],
+            
+              [  "bcm2712-d-rpi-5-b.dtb" ],
+            
+              [  "bcm2712-rpi-5-b.dtb" ],
+            
+              [  "bcm2712-rpi-500.dtb" ],
+            
+              [  "bcm2712-rpi-cm5-cm4io.dtb" ],
+            
+              [  "bcm2712-rpi-cm5-cm5io.dtb" ],
+            
+              [  "bcm2712-rpi-cm5l-cm4io.dtb" ],
+            
+              [  "bcm2712-rpi-cm5l-cm5io.dtb" ],
+            
+              [  "bcm2712d0-rpi-5-b.dtb" ],
+            
+              [  "bootcode.bin" ],
+            
+              [  "config.txt" ],
+            
+              [  "fixup.dat" ],
+            
+              [  "fixup4.dat" ],
+            
+              [  "fixup4cd.dat" ],
+            
+              [  "fixup4db.dat" ],
+            
+              [  "fixup4x.dat" ],
+            
+              [  "fixup_cd.dat" ],
+            
+              [  "fixup_db.dat" ],
+            
+              [  "fixup_x.dat" ],
+            
+              [  "overlays\/README" ],
+            
+              [  "overlays\/act-led.dtbo" ],
+            
+              [  "overlays\/adafruit-st7735r.dtbo" ],
+            
+              [  "overlays\/adafruit18.dtbo" ],
+            
+              [  "overlays\/adau1977-adc.dtbo" ],
+            
+              [  "overlays\/adau7002-simple.dtbo" ],
+            
+              [  "overlays\/ads1015.dtbo" ],
+            
+              [  "overlays\/ads1115.dtbo" ],
+            
+              [  "overlays\/ads7846.dtbo" ],
+            
+              [  "overlays\/adv7282m.dtbo" ],
+            
+              [  "overlays\/adv728x-m.dtbo" ],
+            
+              [  "overlays\/akkordion-iqdacplus.dtbo" ],
+            
+              [  "overlays\/allo-boss-dac-pcm512x-audio.dtbo" ],
+            
+              [  "overlays\/allo-boss2-dac-audio.dtbo" ],
+            
+              [  "overlays\/allo-digione.dtbo" ],
+            
+              [  "overlays\/allo-katana-dac-audio.dtbo" ],
+            
+              [  "overlays\/allo-piano-dac-pcm512x-audio.dtbo" ],
+            
+              [  "overlays\/allo-piano-dac-plus-pcm512x-audio.dtbo" ],
+            
+              [  "overlays\/anyspi.dtbo" ],
+            
+              [  "overlays\/apds9960.dtbo" ],
+            
+              [  "overlays\/applepi-dac.dtbo" ],
+            
+              [  "overlays\/arducam-64mp.dtbo" ],
+            
+              [  "overlays\/arducam-pivariety.dtbo" ],
+            
+              [  "overlays\/at86rf233.dtbo" ],
+            
+              [  "overlays\/audioinjector-addons.dtbo" ],
+            
+              [  "overlays\/audioinjector-bare-i2s.dtbo" ],
+            
+              [  "overlays\/audioinjector-isolated-soundcard.dtbo" ],
+            
+              [  "overlays\/audioinjector-ultra.dtbo" ],
+            
+              [  "overlays\/audioinjector-wm8731-audio.dtbo" ],
+            
+              [  "overlays\/audiosense-pi.dtbo" ],
+            
+              [  "overlays\/audremap-pi5.dtbo" ],
+            
+              [  "overlays\/audremap.dtbo" ],
+            
+              [  "overlays\/balena-fin.dtbo" ],
+            
+              [  "overlays\/bcm2712d0.dtbo" ],
+            
+              [  "overlays\/camera-mux-2port.dtbo" ],
+            
+              [  "overlays\/camera-mux-4port.dtbo" ],
+            
+              [  "overlays\/cap1106.dtbo" ],
+            
+              [  "overlays\/chipcap2.dtbo" ],
+            
+              [  "overlays\/chipdip-dac.dtbo" ],
+            
+              [  "overlays\/cirrus-wm5102.dtbo" ],
+            
+              [  "overlays\/cm-swap-i2c0.dtbo" ],
+            
+              [  "overlays\/cma.dtbo" ],
+            
+              [  "overlays\/crystalfontz-cfa050_pi_m.dtbo" ],
+            
+              [  "overlays\/cutiepi-panel.dtbo" ],
+            
+              [  "overlays\/dacberry400.dtbo" ],
+            
+              [  "overlays\/dht11.dtbo" ],
+            
+              [  "overlays\/dionaudio-kiwi.dtbo" ],
+            
+              [  "overlays\/dionaudio-loco-v2.dtbo" ],
+            
+              [  "overlays\/dionaudio-loco.dtbo" ],
+            
+              [  "overlays\/disable-bt-pi5.dtbo" ],
+            
+              [  "overlays\/disable-bt.dtbo" ],
+            
+              [  "overlays\/disable-emmc2.dtbo" ],
+            
+              [  "overlays\/disable-wifi-pi5.dtbo" ],
+            
+              [  "overlays\/disable-wifi.dtbo" ],
+            
+              [  "overlays\/dpi18.dtbo" ],
+            
+              [  "overlays\/dpi18cpadhi.dtbo" ],
+            
+              [  "overlays\/dpi24.dtbo" ],
+            
+              [  "overlays\/draws.dtbo" ],
+            
+              [  "overlays\/dwc-otg.dtbo" ],
+            
+              [  "overlays\/dwc2.dtbo" ],
+            
+              [  "overlays\/edt-ft5406.dtbo" ],
+            
+              [  "overlays\/enc28j60-spi2.dtbo" ],
+            
+              [  "overlays\/enc28j60.dtbo" ],
+            
+              [  "overlays\/exc3000.dtbo" ],
+            
+              [  "overlays\/ezsound-6x8iso.dtbo" ],
+            
+              [  "overlays\/fbtft.dtbo" ],
+            
+              [  "overlays\/fe-pi-audio.dtbo" ],
+            
+              [  "overlays\/fsm-demo.dtbo" ],
+            
+              [  "overlays\/gc9a01.dtbo" ],
+            
+              [  "overlays\/ghost-amp.dtbo" ],
+            
+              [  "overlays\/goodix.dtbo" ],
+            
+              [  "overlays\/googlevoicehat-soundcard.dtbo" ],
+            
+              [  "overlays\/gpio-charger.dtbo" ],
+            
+              [  "overlays\/gpio-fan.dtbo" ],
+            
+              [  "overlays\/gpio-hog.dtbo" ],
+            
+              [  "overlays\/gpio-ir-tx.dtbo" ],
+            
+              [  "overlays\/gpio-ir.dtbo" ],
+            
+              [  "overlays\/gpio-key.dtbo" ],
+            
+              [  "overlays\/gpio-led.dtbo" ],
+            
+              [  "overlays\/gpio-no-bank0-irq.dtbo" ],
+            
+              [  "overlays\/gpio-no-irq.dtbo" ],
+            
+              [  "overlays\/gpio-poweroff.dtbo" ],
+            
+              [  "overlays\/gpio-shutdown.dtbo" ],
+            
+              [  "overlays\/hat_map.dtb" ],
+            
+              [  "overlays\/hd44780-i2c-lcd.dtbo" ],
+            
+              [  "overlays\/hd44780-lcd.dtbo" ],
+            
+              [  "overlays\/hdmi-backlight-hwhack-gpio.dtbo" ],
+            
+              [  "overlays\/hifiberry-adc.dtbo" ],
+            
+              [  "overlays\/hifiberry-adc8x.dtbo" ],
+            
+              [  "overlays\/hifiberry-amp.dtbo" ],
+            
+              [  "overlays\/hifiberry-amp100.dtbo" ],
+            
+              [  "overlays\/hifiberry-amp3.dtbo" ],
+            
+              [  "overlays\/hifiberry-amp4pro.dtbo" ],
+            
+              [  "overlays\/hifiberry-dac.dtbo" ],
+            
+              [  "overlays\/hifiberry-dac8x.dtbo" ],
+            
+              [  "overlays\/hifiberry-dacplus-pro.dtbo" ],
+            
+              [  "overlays\/hifiberry-dacplus-std.dtbo" ],
+            
+              [  "overlays\/hifiberry-dacplus.dtbo" ],
+            
+              [  "overlays\/hifiberry-dacplusadc.dtbo" ],
+            
+              [  "overlays\/hifiberry-dacplusadcpro.dtbo" ],
+            
+              [  "overlays\/hifiberry-dacplusdsp.dtbo" ],
+            
+              [  "overlays\/hifiberry-dacplushd.dtbo" ],
+            
+              [  "overlays\/hifiberry-digi-pro.dtbo" ],
+            
+              [  "overlays\/hifiberry-digi.dtbo" ],
+            
+              [  "overlays\/highperi.dtbo" ],
+            
+              [  "overlays\/hy28a.dtbo" ],
+            
+              [  "overlays\/hy28b-2017.dtbo" ],
+            
+              [  "overlays\/hy28b.dtbo" ],
+            
+              [  "overlays\/i-sabre-q2m.dtbo" ],
+            
+              [  "overlays\/i2c-bcm2708.dtbo" ],
+            
+              [  "overlays\/i2c-fan.dtbo" ],
+            
+              [  "overlays\/i2c-gpio.dtbo" ],
+            
+              [  "overlays\/i2c-mux.dtbo" ],
+            
+              [  "overlays\/i2c-pwm-pca9685a.dtbo" ],
+            
+              [  "overlays\/i2c-rtc-gpio.dtbo" ],
+            
+              [  "overlays\/i2c-rtc.dtbo" ],
+            
+              [  "overlays\/i2c-sensor.dtbo" ],
+            
+              [  "overlays\/i2c0-pi5.dtbo" ],
+            
+              [  "overlays\/i2c0.dtbo" ],
+            
+              [  "overlays\/i2c1-pi5.dtbo" ],
+            
+              [  "overlays\/i2c1.dtbo" ],
+            
+              [  "overlays\/i2c2-pi5.dtbo" ],
+            
+              [  "overlays\/i2c3-pi5.dtbo" ],
+            
+              [  "overlays\/i2c3.dtbo" ],
+            
+              [  "overlays\/i2c4.dtbo" ],
+            
+              [  "overlays\/i2c5.dtbo" ],
+            
+              [  "overlays\/i2c6.dtbo" ],
+            
+              [  "overlays\/i2s-dac.dtbo" ],
+            
+              [  "overlays\/i2s-gpio28-31.dtbo" ],
+            
+              [  "overlays\/i2s-master-dac.dtbo" ],
+            
+              [  "overlays\/ilitek251x.dtbo" ],
+            
+              [  "overlays\/imx219.dtbo" ],
+            
+              [  "overlays\/imx258.dtbo" ],
+            
+              [  "overlays\/imx290.dtbo" ],
+            
+              [  "overlays\/imx296.dtbo" ],
+            
+              [  "overlays\/imx327.dtbo" ],
+            
+              [  "overlays\/imx378.dtbo" ],
+            
+              [  "overlays\/imx415.dtbo" ],
+            
+              [  "overlays\/imx462.dtbo" ],
+            
+              [  "overlays\/imx477.dtbo" ],
+            
+              [  "overlays\/imx500-pi5.dtbo" ],
+            
+              [  "overlays\/imx500.dtbo" ],
+            
+              [  "overlays\/imx519.dtbo" ],
+            
+              [  "overlays\/imx708.dtbo" ],
+            
+              [  "overlays\/interludeaudio-analog.dtbo" ],
+            
+              [  "overlays\/interludeaudio-digital.dtbo" ],
+            
+              [  "overlays\/iqaudio-codec.dtbo" ],
+            
+              [  "overlays\/iqaudio-dac.dtbo" ],
+            
+              [  "overlays\/iqaudio-dacplus.dtbo" ],
+            
+              [  "overlays\/iqaudio-digi-wm8804-audio.dtbo" ],
+            
+              [  "overlays\/iqs550.dtbo" ],
+            
+              [  "overlays\/irs1125.dtbo" ],
+            
+              [  "overlays\/jedec-spi-nor.dtbo" ],
+            
+              [  "overlays\/justboom-both.dtbo" ],
+            
+              [  "overlays\/justboom-dac.dtbo" ],
+            
+              [  "overlays\/justboom-digi.dtbo" ],
+            
+              [  "overlays\/ltc294x.dtbo" ],
+            
+              [  "overlays\/max98357a.dtbo" ],
+            
+              [  "overlays\/maxtherm.dtbo" ],
+            
+              [  "overlays\/mbed-dac.dtbo" ],
+            
+              [  "overlays\/mcp23017.dtbo" ],
+            
+              [  "overlays\/mcp23s17.dtbo" ],
+            
+              [  "overlays\/mcp2515-can0.dtbo" ],
+            
+              [  "overlays\/mcp2515-can1.dtbo" ],
+            
+              [  "overlays\/mcp2515.dtbo" ],
+            
+              [  "overlays\/mcp251xfd.dtbo" ],
+            
+              [  "overlays\/mcp3008.dtbo" ],
+            
+              [  "overlays\/mcp3202.dtbo" ],
+            
+              [  "overlays\/mcp342x.dtbo" ],
+            
+              [  "overlays\/media-center.dtbo" ],
+            
+              [  "overlays\/merus-amp.dtbo" ],
+            
+              [  "overlays\/midi-uart0-pi5.dtbo" ],
+            
+              [  "overlays\/midi-uart0.dtbo" ],
+            
+              [  "overlays\/midi-uart1-pi5.dtbo" ],
+            
+              [  "overlays\/midi-uart1.dtbo" ],
+            
+              [  "overlays\/midi-uart2-pi5.dtbo" ],
+            
+              [  "overlays\/midi-uart2.dtbo" ],
+            
+              [  "overlays\/midi-uart3-pi5.dtbo" ],
+            
+              [  "overlays\/midi-uart3.dtbo" ],
+            
+              [  "overlays\/midi-uart4-pi5.dtbo" ],
+            
+              [  "overlays\/midi-uart4.dtbo" ],
+            
+              [  "overlays\/midi-uart5.dtbo" ],
+            
+              [  "overlays\/minipitft13.dtbo" ],
+            
+              [  "overlays\/miniuart-bt.dtbo" ],
+            
+              [  "overlays\/mipi-dbi-spi.dtbo" ],
+            
+              [  "overlays\/mlx90640.dtbo" ],
+            
+              [  "overlays\/mmc.dtbo" ],
+            
+              [  "overlays\/mz61581.dtbo" ],
+            
+              [  "overlays\/ov2311.dtbo" ],
+            
+              [  "overlays\/ov5647.dtbo" ],
+            
+              [  "overlays\/ov64a40.dtbo" ],
+            
+              [  "overlays\/ov7251.dtbo" ],
+            
+              [  "overlays\/ov9281.dtbo" ],
+            
+              [  "overlays\/overlay_map.dtb" ],
+            
+              [  "overlays\/papirus.dtbo" ],
+            
+              [  "overlays\/pca953x.dtbo" ],
+            
+              [  "overlays\/pcf857x.dtbo" ],
+            
+              [  "overlays\/pcie-32bit-dma-pi5.dtbo" ],
+            
+              [  "overlays\/pcie-32bit-dma.dtbo" ],
+            
+              [  "overlays\/pciex1-compat-pi5.dtbo" ],
+            
+              [  "overlays\/pibell.dtbo" ],
+            
+              [  "overlays\/pifacedigital.dtbo" ],
+            
+              [  "overlays\/pifi-40.dtbo" ],
+            
+              [  "overlays\/pifi-dac-hd.dtbo" ],
+            
+              [  "overlays\/pifi-dac-zero.dtbo" ],
+            
+              [  "overlays\/pifi-mini-210.dtbo" ],
+            
+              [  "overlays\/piglow.dtbo" ],
+            
+              [  "overlays\/pimidi.dtbo" ],
+            
+              [  "overlays\/pineboards-hat-ai.dtbo" ],
+            
+              [  "overlays\/pineboards-hatdrive-poe-plus.dtbo" ],
+            
+              [  "overlays\/piscreen.dtbo" ],
+            
+              [  "overlays\/piscreen2r.dtbo" ],
+            
+              [  "overlays\/pisound-micro.dtbo" ],
+            
+              [  "overlays\/pisound-pi5.dtbo" ],
+            
+              [  "overlays\/pisound.dtbo" ],
+            
+              [  "overlays\/pitft22.dtbo" ],
+            
+              [  "overlays\/pitft28-capacitive.dtbo" ],
+            
+              [  "overlays\/pitft28-resistive.dtbo" ],
+            
+              [  "overlays\/pitft35-resistive.dtbo" ],
+            
+              [  "overlays\/pps-gpio.dtbo" ],
+            
+              [  "overlays\/proto-codec.dtbo" ],
+            
+              [  "overlays\/pwm-2chan.dtbo" ],
+            
+              [  "overlays\/pwm-gpio-fan.dtbo" ],
+            
+              [  "overlays\/pwm-gpio.dtbo" ],
+            
+              [  "overlays\/pwm-ir-tx.dtbo" ],
+            
+              [  "overlays\/pwm-pio.dtbo" ],
+            
+              [  "overlays\/pwm.dtbo" ],
+            
+              [  "overlays\/pwm1.dtbo" ],
+            
+              [  "overlays\/qca7000-uart0.dtbo" ],
+            
+              [  "overlays\/qca7000.dtbo" ],
+            
+              [  "overlays\/ramoops-pi4.dtbo" ],
+            
+              [  "overlays\/ramoops.dtbo" ],
+            
+              [  "overlays\/rootmaster.dtbo" ],
+            
+              [  "overlays\/rotary-encoder.dtbo" ],
+            
+              [  "overlays\/rpi-backlight.dtbo" ],
+            
+              [  "overlays\/rpi-codeczero.dtbo" ],
+            
+              [  "overlays\/rpi-dacplus.dtbo" ],
+            
+              [  "overlays\/rpi-dacpro.dtbo" ],
+            
+              [  "overlays\/rpi-digiampplus.dtbo" ],
+            
+              [  "overlays\/rpi-ft5406.dtbo" ],
+            
+              [  "overlays\/rpi-fw-uart.dtbo" ],
+            
+              [  "overlays\/rpi-poe-plus.dtbo" ],
+            
+              [  "overlays\/rpi-poe.dtbo" ],
+            
+              [  "overlays\/rpi-sense-v2.dtbo" ],
+            
+              [  "overlays\/rpi-sense.dtbo" ],
+            
+              [  "overlays\/rpi-tv.dtbo" ],
+            
+              [  "overlays\/rra-digidac1-wm8741-audio.dtbo" ],
+            
+              [  "overlays\/sainsmart18.dtbo" ],
+            
+              [  "overlays\/sc16is750-i2c.dtbo" ],
+            
+              [  "overlays\/sc16is750-spi0.dtbo" ],
+            
+              [  "overlays\/sc16is752-i2c.dtbo" ],
+            
+              [  "overlays\/sc16is752-spi0.dtbo" ],
+            
+              [  "overlays\/sc16is752-spi1.dtbo" ],
+            
+              [  "overlays\/sdhost.dtbo" ],
+            
+              [  "overlays\/sdio-pi5.dtbo" ],
+            
+              [  "overlays\/sdio.dtbo" ],
+            
+              [  "overlays\/seeed-can-fd-hat-v1.dtbo" ],
+            
+              [  "overlays\/seeed-can-fd-hat-v2.dtbo" ],
+            
+              [  "overlays\/sh1106-spi.dtbo" ],
+            
+              [  "overlays\/si446x-spi0.dtbo" ],
+            
+              [  "overlays\/smi-dev.dtbo" ],
+            
+              [  "overlays\/smi-nand.dtbo" ],
+            
+              [  "overlays\/smi.dtbo" ],
+            
+              [  "overlays\/spi-gpio35-39.dtbo" ],
+            
+              [  "overlays\/spi-gpio40-45.dtbo" ],
+            
+              [  "overlays\/spi-rtc.dtbo" ],
+            
+              [  "overlays\/spi0-0cs.dtbo" ],
+            
+              [  "overlays\/spi0-1cs-inverted.dtbo" ],
+            
+              [  "overlays\/spi0-1cs.dtbo" ],
+            
+              [  "overlays\/spi0-2cs.dtbo" ],
+            
+              [  "overlays\/spi1-1cs.dtbo" ],
+            
+              [  "overlays\/spi1-2cs.dtbo" ],
+            
+              [  "overlays\/spi1-3cs.dtbo" ],
+            
+              [  "overlays\/spi2-1cs-pi5.dtbo" ],
+            
+              [  "overlays\/spi2-1cs.dtbo" ],
+            
+              [  "overlays\/spi2-2cs-pi5.dtbo" ],
+            
+              [  "overlays\/spi2-2cs.dtbo" ],
+            
+              [  "overlays\/spi2-3cs.dtbo" ],
+            
+              [  "overlays\/spi3-1cs-pi5.dtbo" ],
+            
+              [  "overlays\/spi3-1cs.dtbo" ],
+            
+              [  "overlays\/spi3-2cs-pi5.dtbo" ],
+            
+              [  "overlays\/spi3-2cs.dtbo" ],
+            
+              [  "overlays\/spi4-1cs.dtbo" ],
+            
+              [  "overlays\/spi4-2cs.dtbo" ],
+            
+              [  "overlays\/spi5-1cs-pi5.dtbo" ],
+            
+              [  "overlays\/spi5-1cs.dtbo" ],
+            
+              [  "overlays\/spi5-2cs-pi5.dtbo" ],
+            
+              [  "overlays\/spi5-2cs.dtbo" ],
+            
+              [  "overlays\/spi6-1cs.dtbo" ],
+            
+              [  "overlays\/spi6-2cs.dtbo" ],
+            
+              [  "overlays\/ssd1306-spi.dtbo" ],
+            
+              [  "overlays\/ssd1306.dtbo" ],
+            
+              [  "overlays\/ssd1327-spi.dtbo" ],
+            
+              [  "overlays\/ssd1331-spi.dtbo" ],
+            
+              [  "overlays\/ssd1351-spi.dtbo" ],
+            
+              [  "overlays\/sunfounder-pipower3.dtbo" ],
+            
+              [  "overlays\/sunfounder-pironman5.dtbo" ],
+            
+              [  "overlays\/superaudioboard.dtbo" ],
+            
+              [  "overlays\/sx150x.dtbo" ],
+            
+              [  "overlays\/tc358743-audio.dtbo" ],
+            
+              [  "overlays\/tc358743.dtbo" ],
+            
+              [  "overlays\/tinylcd35.dtbo" ],
+            
+              [  "overlays\/tpm-slb9670.dtbo" ],
+            
+              [  "overlays\/tpm-slb9673.dtbo" ],
+            
+              [  "overlays\/uart0-pi5.dtbo" ],
+            
+              [  "overlays\/uart0.dtbo" ],
+            
+              [  "overlays\/uart1-pi5.dtbo" ],
+            
+              [  "overlays\/uart1.dtbo" ],
+            
+              [  "overlays\/uart2-pi5.dtbo" ],
+            
+              [  "overlays\/uart2.dtbo" ],
+            
+              [  "overlays\/uart3-pi5.dtbo" ],
+            
+              [  "overlays\/uart3.dtbo" ],
+            
+              [  "overlays\/uart4-pi5.dtbo" ],
+            
+              [  "overlays\/uart4.dtbo" ],
+            
+              [  "overlays\/uart5.dtbo" ],
+            
+              [  "overlays\/udrc.dtbo" ],
+            
+              [  "overlays\/ugreen-dabboard.dtbo" ],
+            
+              [  "overlays\/upstream-pi4.dtbo" ],
+            
+              [  "overlays\/upstream.dtbo" ],
+            
+              [  "overlays\/vc4-fkms-v3d-pi4.dtbo" ],
+            
+              [  "overlays\/vc4-fkms-v3d.dtbo" ],
+            
+              [  "overlays\/vc4-kms-dpi-generic.dtbo" ],
+            
+              [  "overlays\/vc4-kms-dpi-hyperpixel2r.dtbo" ],
+            
+              [  "overlays\/vc4-kms-dpi-hyperpixel4.dtbo" ],
+            
+              [  "overlays\/vc4-kms-dpi-hyperpixel4sq.dtbo" ],
+            
+              [  "overlays\/vc4-kms-dpi-panel.dtbo" ],
+            
+              [  "overlays\/vc4-kms-dsi-7inch.dtbo" ],
+            
+              [  "overlays\/vc4-kms-dsi-generic.dtbo" ],
+            
+              [  "overlays\/vc4-kms-dsi-ili9881-5inch.dtbo" ],
+            
+              [  "overlays\/vc4-kms-dsi-ili9881-7inch.dtbo" ],
+            
+              [  "overlays\/vc4-kms-dsi-lt070me05000-v2.dtbo" ],
+            
+              [  "overlays\/vc4-kms-dsi-lt070me05000.dtbo" ],
+            
+              [  "overlays\/vc4-kms-dsi-waveshare-800x480.dtbo" ],
+            
+              [  "overlays\/vc4-kms-dsi-waveshare-panel.dtbo" ],
+            
+              [  "overlays\/vc4-kms-kippah-7inch.dtbo" ],
+            
+              [  "overlays\/vc4-kms-v3d-pi4.dtbo" ],
+            
+              [  "overlays\/vc4-kms-v3d-pi5.dtbo" ],
+            
+              [  "overlays\/vc4-kms-v3d.dtbo" ],
+            
+              [  "overlays\/vc4-kms-vga666.dtbo" ],
+            
+              [  "overlays\/vga666.dtbo" ],
+            
+              [  "overlays\/vl805.dtbo" ],
+            
+              [  "overlays\/w1-gpio-pi5.dtbo" ],
+            
+              [  "overlays\/w1-gpio-pullup-pi5.dtbo" ],
+            
+              [  "overlays\/w1-gpio-pullup.dtbo" ],
+            
+              [  "overlays\/w1-gpio.dtbo" ],
+            
+              [  "overlays\/w5500.dtbo" ],
+            
+              [  "overlays\/watterott-display.dtbo" ],
+            
+              [  "overlays\/waveshare-can-fd-hat-mode-a.dtbo" ],
+            
+              [  "overlays\/waveshare-can-fd-hat-mode-b.dtbo" ],
+            
+              [  "overlays\/wifimac.dtbo" ],
+            
+              [  "overlays\/wittypi.dtbo" ],
+            
+              [  "overlays\/wm8960-soundcard.dtbo" ],
+            
+              [  "overlays\/ws2812-pio.dtbo" ],
+            
+              [  "start.elf" ],
+            
+              [  "start4.elf" ],
+            
+              [  "start4cd.elf" ],
+            
+              [  "start4db.elf" ],
+            
+              [  "start4x.elf" ],
+            
+              [  "start_cd.elf" ],
+            
+              [  "start_db.elf" ],
+            
+              [  "start_x.elf" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

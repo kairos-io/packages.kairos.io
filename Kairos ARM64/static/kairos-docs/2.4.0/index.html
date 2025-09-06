@@ -1,0 +1,592 @@
+
+
+
+
+
+
+
+
+<html>
+<head>
+
+
+ <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<style>
+table.dataTable.nowrap th,table.dataTable.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{width:75px;display:inline-block}div.dataTables_wrapper div.dataTables_filter{text-align:right}div.dataTables_wrapper div.dataTables_filter label{font-weight:400;white-space:nowrap;text-align:left}div.dataTables_wrapper div.dataTables_filter input{margin-left:.5em;display:inline-block;width:auto}div.dataTables_wrapper div.dataTables_paginate{white-space:nowrap;float:right}@media screen and (max-width: 768px){div.dataTables_paginate{white-space:nowrap;float:none!important;display:flex;justify-content:space-around}}table.dataTable thead>tr>th.sorting_asc,table.dataTable thead>tr>th.sorting_desc,table.dataTable thead>tr>th.sorting,table.dataTable thead>tr>td.sorting_asc,table.dataTable thead>tr>td.sorting_desc,table.dataTable thead>tr>td.sorting{padding-right:30px}table.dataTable thead .sorting,table.dataTable thead .sorting_asc,table.dataTable thead .sorting_desc,table.dataTable thead .sorting_asc_disabled,table.dataTable thead .sorting_desc_disabled{cursor:pointer;position:relative}table.dataTable thead .sorting:after,table.dataTable thead .sorting_asc:after,table.dataTable thead .sorting_desc:after,table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{position:absolute;bottom:4px;right:4px;display:block;font-family:"Font Awesome\ 5 Free";opacity:.5}table.dataTable thead .sorting:after{opacity:.2;content:"\f0dc"}table.dataTable thead .sorting_asc:after{content:"\f0de"}table.dataTable thead .sorting_desc:after{content:"\f0dd"}table.dataTable thead .sorting_asc_disabled:after,table.dataTable thead .sorting_desc_disabled:after{color:#eee}@media screen and (max-width: 768px){div.dataTables_wrapper div.dataTables_length,div.dataTables_wrapper div.dataTables_filter,div.dataTables_wrapper div.dataTables_info,div.dataTables_wrapper div.dataTables_paginate{text-align:center}}
+</style>
+<script type="text/javascript">
+!function(e){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return e(a,window,document)}):"object"==typeof exports?module.exports=function(a,t){return a||(a=window),t&&t.fn.dataTable||(t=require("datatables.net")(a,t).$),e(t,a,a.document)}:e(jQuery,window,document)}(function(e,a,t){var n=e.fn.dataTable;return e.extend(!0,n.defaults,{dom:"<'columns'<'column is-6'l><'column is-6'f>><'columns'<'column is-12 table-container'tr>><'columns'<'column is-5'i><'column is-7'p>>",renderer:"bulma"}),e.extend(n.ext.classes,{sWrapper:"dataTables_wrapper dt-bulma",sFilterInput:"input is-small",sLengthSelect:"input is-small",sProcessing:"dataTables_processing panel",sPageButton:"pagination-link",sPagePrevious:"pagination-previous",sPageNext:"pagination-next",sPageButtonActive:"is-current"}),n.ext.renderer.pageButton.bulma=function(a,i,s,r,l,o){var u,d,c,p=new n.Api(a),f=a.oClasses,g=a.oLanguage.oPaginate,b=a.oLanguage.oAria.paginate||{},m=0,x=function(t,n){var i,r,c,v,w=function(a){a.preventDefault(),!e(a.currentTarget).is("[disabled]")&&!e(a.currentTarget).is("#table_ellipsis")&&p.page()!=a.data.action&&p.page(a.data.action).draw("page")};for(i=0,r=n.length;i<r;i++)if(v=n[i],e.isArray(v))x(t,v);else{d=u="";var T=!1;switch(v){case"ellipsis":u="&#x2026;",T=!0;break;case"first":u=g.sFirst,T=v+!(0<l);break;case"previous":u=g.sPrevious,T=!(0<l);break;case"next":u=g.sNext,T=!(l<o-1);break;case"last":u=g.sLast,T=v+!(l<o-1);break;default:u=v+1,d=l===v?" is-current":"",T=!1}u&&(c=e("<li>",{id:0===s&&"string"==typeof v?a.sTableId+"_"+v:null}).append(e("<a>",{class:f.sPageButton+" "+d,href:"#","aria-controls":a.sTableId,"aria-label":b[v],"data-dt-idx":m,tabindex:a.iTabIndex,disabled:T}).html(u)).appendTo(t),a.oApi._fnBindAction(c,{action:v},w),m++)}};try{c=e(i).find(t.activeElement).data("dt-idx")}catch(e){}x(e(i).empty().html('<ul class="pagination-list"/>').children("ul"),r),c&&e(i).find("[data-dt-idx="+c+"]").focus()},n});
+</script>
+
+<style>
+body {
+ font-family: 'Alata', sans-serif;
+}
+</style>
+<title>Showing static/kairos-docs-2.4.0 in Kairos ARM64 </title>
+</head>
+
+
+<body>
+<section class="hero">
+  <div class="hero-body">
+     <div class="container ">
+        <div class="columns is-multiline is-mobile ">
+
+        <div class="column is-half">
+          <h1 class="title">
+        <a href=""><span class="icon has-text-primary is-medium 	"> <i class="fas fa-home"></i></span> </a> static/kairos-docs-2.4.0
+          </h1>
+        </div>
+
+        <div class="column is-half">
+   
+        </div>
+
+        <div class="column is-half">
+              <h2 class="subtitle">
+                      <span class="icon is-medium 	"> <i class="fas fa-info-circle"></i></span>
+                Kairos documentation
+             </h2>
+        </div>
+        <div class="column is-half has-text-right">
+        <a href="/Kairos%20ARM64">
+        <span class="icon has-text-dark is-medium 	"> <i class="fas fa-truck"></i></span>
+                     Kairos ARM64
+                     </a>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container">
+
+<div class="box">
+
+<nav class="panel">
+  <p class="panel-heading">
+  <span class="icon has-text-primary is-medium"> <i class="fas fa-box-open"></i></span> Overview of static/kairos-docs
+  </p>
+
+
+<div class="p-3 m-3 container">
+
+          
+<span class="icon has-text-primary is-medium"> <i class="fas fa-box"></i></span> OCI Image: <strong> <a href="https://quay.io/kairos/packages-arm64:kairos-docs-static-2.4.0" target="_blank"> quay.io/kairos/packages-arm64:kairos-docs-static-2.4.0 </a> </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-briefcase"></i></span> Version:  <strong> 2.4.0  </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-gavel"></i></span> License: <strong> Apache License v2 </strong> <br>
+<span class="icon has-text-primary is-medium"> <i class="fas fa-clock"></i></span> Build date: <strong>  </strong> <br>
+
+
+
+
+
+
+
+
+
+<h1> Labels </h1>
+<div class="container">
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> autobump.revdeps: true
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> github.owner: kairos-io
+  </span>
+  
+  <span class="tag">
+  <span class="icon has-text-dark is-medium"> <i class="fas fa-tag"></i></span> github.repo: kairos-docs
+  </span>
+  
+</div>
+
+
+
+
+
+
+
+<h1> Links </h1>
+
+<div class="container">
+  
+    <span class="tag">
+    <a href="https://github.com/kairos-io/kairos-docs" target="_blank"> <span class="icon has-text-dark is-medium"> <i class="fas fa-link"></i></span> https://github.com/kairos-io/kairos-docs </a>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</nav>
+
+
+
+
+
+
+
+
+<br>
+<nav class="panel">
+  <p class="panel-heading">
+    Files
+  </p>
+  <div class="p-3 m-1">
+<table  
+  id="table">
+  <thead>
+    <tr>
+      <th >Name</th>
+    </tr>
+  </thead>
+
+</table>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+var data = [
+     
+              [  "404.html" ],
+            
+              [  "blog\/2023\/01\/04\/media-section\/index.html" ],
+            
+              [  "blog\/2023\/01\/27\/kairos-release-v1.5\/index.html" ],
+            
+              [  "blog\/2023\/02\/07\/kairos-at-fosdem-2023\/index.html" ],
+            
+              [  "blog\/2023\/02\/26\/kairos-release-v1.6\/index.html" ],
+            
+              [  "blog\/2023\/03\/09\/kairos-at-the-kcd-amsterdam-and-paris-2023\/index.html" ],
+            
+              [  "blog\/2023\/03\/13\/kairos-spectrocloud-and-canonical-collaborate-to-deliver-revolutionary-telco-radio-edge-solution\/index.html" ],
+            
+              [  "blog\/2023\/03\/22\/understanding-immutable-linux-os-benefits-architecture-and-challenges\/index.html" ],
+            
+              [  "blog\/2023\/03\/29\/access-your-home-lab-kairos-cluster-over-a-wireguard-vpn\/index.html" ],
+            
+              [  "blog\/2023\/04\/13\/kairos-release-v2.0\/index.html" ],
+            
+              [  "blog\/2023\/04\/18\/kairos-is-now-part-of-the-secure-edge-native-architecture-by-spectro-cloud-and-intel\/index.html" ],
+            
+              [  "blog\/2023\/06\/15\/kairos-release-v2.2\/index.html" ],
+            
+              [  "blog\/2023\/07\/10\/unveiling-kairos-v2.3-fips-compliance-and-more\/index.html" ],
+            
+              [  "blog\/2023\/09\/19\/kairos-release-v2.4\/index.html" ],
+            
+              [  "blog\/2023\/09\/26\/hacktoberfest-2023\/index.html" ],
+            
+              [  "blog\/index.html" ],
+            
+              [  "blog\/index.xml" ],
+            
+              [  "blog\/page\/1\/index.html" ],
+            
+              [  "blog\/page\/2\/index.html" ],
+            
+              [  "community\/index.html" ],
+            
+              [  "community\/index.xml" ],
+            
+              [  "css\/prism.css" ],
+            
+              [  "css\/swagger-ui.css" ],
+            
+              [  "docs\/advanced\/after-install\/index.html" ],
+            
+              [  "docs\/advanced\/build\/index.html" ],
+            
+              [  "docs\/advanced\/bundles\/index.html" ],
+            
+              [  "docs\/advanced\/coco\/index.html" ],
+            
+              [  "docs\/advanced\/configuring_partitions\/index.html" ],
+            
+              [  "docs\/advanced\/customizing\/index.html" ],
+            
+              [  "docs\/advanced\/index.html" ],
+            
+              [  "docs\/advanced\/index.xml" ],
+            
+              [  "docs\/advanced\/livelayering\/index.html" ],
+            
+              [  "docs\/advanced\/networking\/index.html" ],
+            
+              [  "docs\/advanced\/partition_encryption\/index.html" ],
+            
+              [  "docs\/advanced\/private_registry_auth\/index.html" ],
+            
+              [  "docs\/architecture\/cloud-init\/index.html" ],
+            
+              [  "docs\/architecture\/container\/index.html" ],
+            
+              [  "docs\/architecture\/immutable\/index.html" ],
+            
+              [  "docs\/architecture\/index.html" ],
+            
+              [  "docs\/architecture\/index.xml" ],
+            
+              [  "docs\/architecture\/meta\/index.html" ],
+            
+              [  "docs\/architecture\/network\/index.html" ],
+            
+              [  "docs\/development\/debugging-station\/index.html" ],
+            
+              [  "docs\/development\/development\/index.html" ],
+            
+              [  "docs\/development\/index.html" ],
+            
+              [  "docs\/development\/index.xml" ],
+            
+              [  "docs\/development\/nvidia\/index.html" ],
+            
+              [  "docs\/examples\/airgap\/index.html" ],
+            
+              [  "docs\/examples\/bundles\/index.html" ],
+            
+              [  "docs\/examples\/core\/index.html" ],
+            
+              [  "docs\/examples\/ha\/index.html" ],
+            
+              [  "docs\/examples\/index.html" ],
+            
+              [  "docs\/examples\/index.xml" ],
+            
+              [  "docs\/examples\/localai\/index.html" ],
+            
+              [  "docs\/examples\/metallb\/index.html" ],
+            
+              [  "docs\/examples\/multi-node\/index.html" ],
+            
+              [  "docs\/examples\/multi-node-p2p\/index.html" ],
+            
+              [  "docs\/examples\/multi-node-p2p-ha\/index.html" ],
+            
+              [  "docs\/examples\/multi-node-p2p-ha-kubevip\/index.html" ],
+            
+              [  "docs\/examples\/openamt\/index.html" ],
+            
+              [  "docs\/examples\/p2p_e2e\/index.html" ],
+            
+              [  "docs\/examples\/single-node\/index.html" ],
+            
+              [  "docs\/examples\/single-node-p2p\/index.html" ],
+            
+              [  "docs\/examples\/wifi\/index.html" ],
+            
+              [  "docs\/getting-started\/index.html" ],
+            
+              [  "docs\/getting-started\/index.xml" ],
+            
+              [  "docs\/index.html" ],
+            
+              [  "docs\/index.xml" ],
+            
+              [  "docs\/installation\/automated\/index.html" ],
+            
+              [  "docs\/installation\/index.html" ],
+            
+              [  "docs\/installation\/index.xml" ],
+            
+              [  "docs\/installation\/interactive\/index.html" ],
+            
+              [  "docs\/installation\/manual\/index.html" ],
+            
+              [  "docs\/installation\/netboot\/index.html" ],
+            
+              [  "docs\/installation\/nvidia_agx_orin\/index.html" ],
+            
+              [  "docs\/installation\/p2p\/index.html" ],
+            
+              [  "docs\/installation\/qrcode\/index.html" ],
+            
+              [  "docs\/installation\/raspberry\/index.html" ],
+            
+              [  "docs\/installation\/takeover\/index.html" ],
+            
+              [  "docs\/installation\/webui\/index.html" ],
+            
+              [  "docs\/media\/index.html" ],
+            
+              [  "docs\/media\/index.xml" ],
+            
+              [  "docs\/reference\/architecture\/index.html" ],
+            
+              [  "docs\/reference\/artifacts\/index.html" ],
+            
+              [  "docs\/reference\/auroraboot\/index.html" ],
+            
+              [  "docs\/reference\/build-from-scratch\/index.html" ],
+            
+              [  "docs\/reference\/configuration\/index.html" ],
+            
+              [  "docs\/reference\/entangle\/index.html" ],
+            
+              [  "docs\/reference\/faq\/index.html" ],
+            
+              [  "docs\/reference\/image_matrix\/index.html" ],
+            
+              [  "docs\/reference\/index.html" ],
+            
+              [  "docs\/reference\/index.xml" ],
+            
+              [  "docs\/reference\/kairosctl\/index.html" ],
+            
+              [  "docs\/reference\/recovery_mode\/index.html" ],
+            
+              [  "docs\/reference\/reset\/index.html" ],
+            
+              [  "docs\/reference\/troubleshooting\/index.html" ],
+            
+              [  "docs\/upgrade\/index.html" ],
+            
+              [  "docs\/upgrade\/index.xml" ],
+            
+              [  "docs\/upgrade\/kubernetes\/index.html" ],
+            
+              [  "docs\/upgrade\/manual\/index.html" ],
+            
+              [  "docs\/upgrade\/recovery\/index.html" ],
+            
+              [  "examples\/images\/flash_t234_qspi_sdmmc.xml" ],
+            
+              [  "favicons\/android-144x144.png" ],
+            
+              [  "favicons\/android-192x192.png" ],
+            
+              [  "favicons\/android-36x36.png" ],
+            
+              [  "favicons\/android-48x48.png" ],
+            
+              [  "favicons\/android-72x72.png" ],
+            
+              [  "favicons\/android-96x96.png" ],
+            
+              [  "favicons\/android-chrome-192x192.png" ],
+            
+              [  "favicons\/apple-touch-icon-180x180.png" ],
+            
+              [  "favicons\/apple-touch-icon.png" ],
+            
+              [  "favicons\/browserconfig.xml" ],
+            
+              [  "favicons\/favicon-1024.png" ],
+            
+              [  "favicons\/favicon-16x16.png" ],
+            
+              [  "favicons\/favicon-256.png" ],
+            
+              [  "favicons\/favicon-32x32.png" ],
+            
+              [  "favicons\/favicon.ico" ],
+            
+              [  "favicons\/mstile-150x150.png" ],
+            
+              [  "favicons\/pwa-192x192.png" ],
+            
+              [  "favicons\/pwa-512x512.png" ],
+            
+              [  "favicons\/site.webmanifest" ],
+            
+              [  "favicons\/tile150x150.png" ],
+            
+              [  "favicons\/tile310x150.png" ],
+            
+              [  "favicons\/tile310x310.png" ],
+            
+              [  "favicons\/tile70x70.png" ],
+            
+              [  "images\/kairos-800x419.png" ],
+            
+              [  "images\/kairos-over-wireguard.svg" ],
+            
+              [  "images\/schema-validation-preview.gif" ],
+            
+              [  "index\/1.png" ],
+            
+              [  "index\/2.png" ],
+            
+              [  "index\/3.png" ],
+            
+              [  "index\/4.png" ],
+            
+              [  "index\/armadillo.png" ],
+            
+              [  "index\/basics\/arrowRight.png" ],
+            
+              [  "index\/basics\/opened-box.png" ],
+            
+              [  "index\/basics\/origami-bird.png" ],
+            
+              [  "index\/basics\/shell.png" ],
+            
+              [  "index\/book.png" ],
+            
+              [  "index\/downloads\/alpine.png" ],
+            
+              [  "index\/downloads\/arrow-right.svg" ],
+            
+              [  "index\/downloads\/download.svg" ],
+            
+              [  "index\/downloads\/fedora.png" ],
+            
+              [  "index\/downloads\/ubuntu.png" ],
+            
+              [  "index\/explore.png" ],
+            
+              [  "index\/footer-logo.png" ],
+            
+              [  "index\/footer.png" ],
+            
+              [  "index\/github.png" ],
+            
+              [  "index\/kairos-name-logo.png" ],
+            
+              [  "index\/logo.png" ],
+            
+              [  "index\/makes-diff\/box.png" ],
+            
+              [  "index\/makes-diff\/rocket.png" ],
+            
+              [  "index\/makes-diff\/security.png" ],
+            
+              [  "index\/makes-diff\/swirl.png" ],
+            
+              [  "index\/play-button.png" ],
+            
+              [  "index\/press-blade\/chevronRight.svg" ],
+            
+              [  "index\/press-blade\/k8s-superpowers.png" ],
+            
+              [  "index\/press-blade\/spectro-intel.png" ],
+            
+              [  "index\/press-blade\/theNewStack.png" ],
+            
+              [  "index\/star.svg" ],
+            
+              [  "index\/wrapped-armadillo.png" ],
+            
+              [  "index.html" ],
+            
+              [  "index.json" ],
+            
+              [  "index.xml" ],
+            
+              [  "js\/deflate.js" ],
+            
+              [  "js\/index.e56912beb812c8076131e1d8c16eb4ebd3039d4245790e4f7e134fd37a50686fead5543265d16e2ca5e132ce1c27e28aecfa9ca5593147bfda44ae44863cb91b.js" ],
+            
+              [  "js\/main.min.99abe30f7fb05785a480d405ee1665ebd520cec6bbadffe966b7737e103675b8.js" ],
+            
+              [  "js\/prism.js" ],
+            
+              [  "js\/swagger-ui-bundle.js" ],
+            
+              [  "js\/swagger-ui-standalone-preset.js" ],
+            
+              [  "js\/tabpane-persist.js" ],
+            
+              [  "offline-search-index.e5454da897b48cde885a22c96a9f34e6.json" ],
+            
+              [  "robots.txt" ],
+            
+              [  "scss\/main.min.41a58f634fa3b2f58181cff858a88a554bab93f56b74151649cd0509b8205c51.css" ],
+            
+              [  "search\/index.html" ],
+            
+              [  "sitemap.xml" ],
+            
+              [  "v1.6.0\/cloud-config.json" ],
+            
+              [  "v1.6.0-rc1\/cloud-config.json" ],
+            
+              [  "v1.6.0-rc2\/cloud-config.json" ],
+            
+              [  "v1.6.0-rc3\/cloud-config.json" ],
+            
+              [  "v2.0.0\/cloud-config.json" ],
+            
+              [  "v2.0.0-alpha1\/cloud-config.json" ],
+            
+              [  "v2.0.0-alpha2\/cloud-config.json" ],
+            
+              [  "v2.0.0-alpha3\/cloud-config.json" ],
+            
+              [  "v2.0.0-rc5\/cloud-config.json" ],
+            
+              [  "v2.0.0-rc6\/cloud-config.json" ],
+            
+              [  "v2.0.1\/cloud-config.json" ],
+            
+              [  "webfonts\/fa-brands-400.ttf" ],
+            
+              [  "webfonts\/fa-brands-400.woff2" ],
+            
+              [  "webfonts\/fa-regular-400.ttf" ],
+            
+              [  "webfonts\/fa-regular-400.woff2" ],
+            
+              [  "webfonts\/fa-solid-900.ttf" ],
+            
+              [  "webfonts\/fa-solid-900.woff2" ],
+            
+              [  "webfonts\/fa-v4compatibility.ttf" ],
+            
+              [  "webfonts\/fa-v4compatibility.woff2" ],
+            
+            [""    ]
+];
+
+    $("#table").DataTable({
+      "deferRender": true,
+      "processing": true,
+      "data": data,
+      "columns": [
+            { title: "Name" },
+        ]
+    });
+</script>
+</nav>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>
